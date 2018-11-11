@@ -1,5 +1,5 @@
 function solve(x, y) {
-  if(x > 10 || y > 10) {
+  if(outOfBounds(x) || outOfBounds(y)) {
     return 0;
   }
 
@@ -7,10 +7,26 @@ function solve(x, y) {
     return null;
   }
 
-  if(x == 10 || y == 10) {
+  if(outerCircle(x) || outerCircle(y)) {
     return 1;
   }
 
+}
+
+function outOfBounds(num) {
+  return num > 10.0;
+}
+
+function outerCircle(num) {
+  return num >= 6.0 && num <= 10.0;
+}
+
+function middleCircle(num) {
+  return num >= 2 && num <= 5;
+}
+
+function innerCircle(num) {
+  return num >= 0 && num <= 1;
 }
 
 export { solve }
