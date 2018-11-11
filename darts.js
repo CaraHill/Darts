@@ -1,10 +1,10 @@
 function solve(x, y) {
-  if(outOfBounds(x) || outOfBounds(y)) {
-    return 0;
+  if(typeof x === "string" || typeof y === "string") {
+    return null;
   }
 
-  if(typeof x == "string" || typeof y == "string") {
-    return null;
+  if(outOfBounds(x) || outOfBounds(y)) {
+    return 0;
   }
 
   if(outerCircle(x) || outerCircle(y)) {
