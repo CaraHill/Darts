@@ -11,6 +11,9 @@ function solve(x, y) {
     return 1;
   }
 
+  if(middleCircle(x) || middleCircle(y)) {
+    return 5;
+  }
 }
 
 function outOfBounds(num) {

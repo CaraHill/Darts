@@ -21,7 +21,7 @@ describe('Return the correct amount earned by a dart landing in a given point in
     expect(solve(x, y)).toBeNull();
   });
 
-  xtest('A dart lands in the middle circle', () => {
+  test('A dart lands in the middle circle', () => {
     const x = 3;
     const y = 3.7;
     const expected = 5;
